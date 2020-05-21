@@ -11,7 +11,9 @@ const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/project2
 mongoose.connect(MONGO_URI, {useFindAndModify: true, useUnifiedTopology: true, useNewUrlParser: true})/****I am different****/
 db.on('open', ()=> {show('Mongo works')})
 
-
+app.get('/' , (req, res) => {
+    res.send('Hello World!');
+  });
 
 app.listen(PORT, ()=> {
     show('I am connected')
