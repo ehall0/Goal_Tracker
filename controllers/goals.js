@@ -17,7 +17,7 @@ const isAuthenticated = (req, res, next) => {
 /////////////////////////
 
 //////Index route////////
-goalsController.get('/',isAuthenticated, (req,res)=>{
+goalsController.get('/', (req,res)=>{
     const thisRunsNext=  (error, allGoals) => {
         if(error){
             show(error)
@@ -41,31 +41,37 @@ goalsController.get('/seed', (req,res)=> {
     Goal.create([
         {
             timeframe:'Daily',
+            name: 'Chris',
             goal:'Go to the grocery store',
             isGoalReached:true
         },
         {
             timeframe:'Monthly',
+            name: 'Joe',
             goal:'Get a job',
             isGoalReached:true
         },
         {
             timeframe:'Weekly',
+            name: 'Jenn',
             goal:'Run 3 times by the river',
             isGoalReached:false
         },
         {
             timeframe:'Daily',
+            name: 'Sally',
             goal:'complete homework',
             isGoalReached:true
         },
         {
             timeframe:'Yearly',
+            name: 'Emily',
             goal:'Sell current car and buy a new one',
             isGoalReached:true
         },
         {
             timeframe:'Yearly',
+            name: 'Bob',
             goal:'Graduate college',
             isGoalReached:false
         },
