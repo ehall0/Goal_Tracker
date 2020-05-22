@@ -8,8 +8,8 @@ class Edit extends React.Component {
         <div>
             <h1>Edit Goal</h1>
             <form action={`/goals/edit/${goal._id}?_method=put`}method="POST">
-                Timeframe: <input type="text" name="timeframe" value={log.title} /><br/>
-                Goal: <input type="textarea" name="goal" value={log.entry} /><br/>
+                Timeframe: <input type="text" name="timeframe" value={goal.timeframe} /><br/>
+                Goal: <input type="textarea" name="goal" value={goal.goal} /><br/>
                 Goal Reached: <input type="checkbox" name="isGoalReached" checked= {goal.isGoalReached ? 'checked' : ''} /><br/>
                 <input type="submit" name="" value="Edit Goal"/>
 
