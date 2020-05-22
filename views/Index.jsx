@@ -8,7 +8,7 @@ class Index extends React.Component {
     return (
         <Layout>
           <div id='index'>
-            <h1>Personal Goals Tracker</h1>
+            <h1>Goals Tracker</h1>
             <h4>{this.props.username}</h4>
             {this.props.username? logout: ''}
             <nav>
@@ -22,13 +22,14 @@ class Index extends React.Component {
                         <div>
                           <a href={`/goals/${goal._id}`} className="list-group-item list-group-item-action">
                           <div class="d-flex w-100 justify-content-between">
-                            <h5 className="mb-1">{goal.timeframe}</h5>
+                            <h5 className="mb-1">{goal.timeframe}/{goal.name}</h5>
+                            <h4>{goal.isGoalReached ? <span>&#9745;</span> : <span>&#9744;</span> }</h4>
                             <small> <form action ={`/goals/${goal._id}?_method=DELETE`} method ="post">
                                     <input className="btn btn-danger" type="submit" value="delete"/>
                                   </form></small>
                           </div>
                           <p className="mb-1">{goal.goal}</p>
-                          <small><a href = {`/goals/edit/${goal._id}`}>edit this {goal.timeframe} goal</a></small>
+                          
                         </a>
                         <br></br>
                         </div>

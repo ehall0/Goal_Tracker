@@ -121,7 +121,7 @@ goalsController.put('/edit/:id', isAuthenticated,(req,res) => {
         req.body.isGoalReached= false;
     }
     Goal.findByIdAndUpdate(req.params.id, req.body, (error, data) => {
-        res.redirect('/goals');
+        res.redirect('/goals/');
     });
 });
 
@@ -133,7 +133,8 @@ goalsController.get('/:id',isAuthenticated, (req,res) => {
             show(error)
         }else{
            res.render('Show', {
-               goal: foundGoal
+               goal: foundGoal,
+                username: req.session.currentUser,
            })
         }
     })
