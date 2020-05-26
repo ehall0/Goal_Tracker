@@ -35,6 +35,21 @@ app.use('/user', userController)
 mongoose.connect(MONGO_URI, {useFindAndModify: true, useUnifiedTopology: true, useNewUrlParser: true})/****I am different****/
 db.on('open', ()=> {show('Mongo works')})
 
+app.get('/goals', (req,res)=>{
+  const thisRunsNext=  (error, allGoals) => {
+      if(error){
+          show(error)
+      }else{
+          const props= {
+              goals: allGoals,
+              username: req.session.currentUser,
+          }
+      res.render('Index', props)
+      }
+  }
+  Goal.find({}, thisRunsNext)
+})
+
 ////////////////
 //Authorization Routes
 /////////////////
