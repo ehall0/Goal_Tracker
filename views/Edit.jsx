@@ -6,7 +6,7 @@ class Edit extends React.Component {
     return (
       <Layout>
         <div>
-        <h1 className="index-title">Goals Tracker</h1>
+        <h1 className="index-title">Goal Tracker</h1>
             <h3 className="edit-goal">Edit Goal</h3>
             <form className= "newForm" action={`/goals/edit/${goal._id}?_method=put`}method="POST">
               <div className="form-group">

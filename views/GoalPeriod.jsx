@@ -9,7 +9,7 @@ class GoalPeriod extends React.Component {
         <Layout>
        <div id='index'>
        <div className="header" >
-            <h1 className="index-title">Goals Tracker</h1>
+            <h1 className="index-title">Goal Tracker</h1>
             <div className= "user-logout">
             <h4 className="user">{this.props.username}</h4>
             <div className='logout'>

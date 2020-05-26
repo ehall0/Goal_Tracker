@@ -4,7 +4,7 @@ class Show extends React.Component {
     render(){
         return (
             <Layout>
-               <h1 className="index-title">Goals Tracker</h1>
+               <h1 className="index-title">Goal Tracker</h1>
                  <div className="jumbotron show-page">
                 <h1 >{this.props.goal.timeframe}</h1>
                 <p>{this.props.goal.goal}</p>

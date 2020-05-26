@@ -5,7 +5,7 @@ class LoginUser extends React.Component{
         return(
             <Layout>
             <div>
-            <h1 className="index-title">Goals Tracker</h1>
+            <h1 className="index-title">Goal Tracker</h1>
                 <h1 className="edit-goal">Login</h1>
                 <a className= "nav-link" href='/user/new'>Create New Account</a>
                 <form className="newForm" action="/sessions/" method="POST">

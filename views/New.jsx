@@ -4,7 +4,7 @@ class New extends React.Component {
   render() {
     return (
         <Layout>
-           <h1 className="index-title">Goals Tracker</h1>
+           <h1 className="index-title">Goal Tracker</h1>
             <nav className="nav">
                 <a className="nav-link" href= "/goals"> Back</a>
             </nav>

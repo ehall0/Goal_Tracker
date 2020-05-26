@@ -5,7 +5,7 @@ class NewUser extends React.Component{
         return(
             <Layout>
             <div>
-                <h1 className="index-title">Goals Tracker</h1>
+                <h1 className="index-title">Goal Tracker</h1>
                 <h1 className="edit-goal">New User</h1>
                 <form className="newForm" action="/user/" method="POST">
                     <div className= "form-group">
