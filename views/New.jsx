@@ -4,16 +4,28 @@ class New extends React.Component {
   render() {
     return (
         <Layout>
-            <h1>New Goal</h1>
-            <nav>
-                <a href= "/goals"> Back to Goal Tracker</a>
+           <h1 className="index-title">Goals Tracker</h1>
+            <nav className="nav">
+                <a className="nav-link" href= "/goals"> Back</a>
             </nav>
-            <form action="/goals" method="POST">
-                Name: <input type="text" name="name" /><br/>
-                Timeframe: <input type="text" name="timeframe" /><br/>
-                Goal: <input type="textarea" name="goal" /><br/>
-                Goal Reached: <input type="checkbox" name="isGoalReached" /><br/>
-                <input type="submit" name="" value="Create Goal"/>
+            <form className= "newForm" action="/goals" method="POST">
+                <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" className="form-control" name="name" /><br/>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputEmail1">Timeframe</label>
+                <input type="text" className="form-control" name="timeframe" /><br/>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputEmail1">Goal Description</label>
+                <input type="text" className="form-control" name="goal" /><br/>
+                </div>
+                <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                <label class="form-check-label" for="exampleCheck1">Goal Reached</label>
+              </div>
+                <input className="btn btn-secondary" type="submit" name="" value="Create Goal"/>
              </form>
         </Layout>);
   }

@@ -1,0 +1,108 @@
+body{
+    background: black;
+    background-repeat: round;
+    
+}
+.index-title{
+    color:whitesmoke;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    font-family: 'Prompt', sans-serif;
+    font-size: 6.5vh;
+}
+.jumbotron-fluid{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    background-color: black;
+    align-items: center;
+   
+}
+.view-goals:hover{
+    text-decoration: none;
+    color: rgb(156, 156, 156);
+}
+.view-goals{
+    color:whitesmoke;
+    font-family: 'Muli', sans-serif;
+    padding-left:4.5vh;
+    padding-right:4.5vh;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 8vh;
+    margin-right: 4vh;
+}
+.user-logout{
+    display:flex;
+    flex-direction: column;
+    margin-right:2vh;
+    margin-top: 2vh;
+    text-align: right;
+}
+.user{
+    color:rgb(194, 190, 190);
+    font-family: 'Muli', sans-serif;
+}
+.border-right{
+    border-right: rgba(255, 255, 255, 0.788);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.lead{
+    color: rgba(245, 245, 245, 0.479);
+}
+
+.btn-outline-dark{
+    color: whitesmoke;
+}
+.goal-list{
+    padding-left: 4vh;
+    padding-right: 4vh;
+}
+.nav{
+padding-right:6vh;
+
+}
+.list-group-item-action{
+    background-color: black;
+    color:rgba(245, 245, 245, 0.87);
+    font-family:  'Muli', sans-serif;
+    font-size:4.5vh;
+    border-bottom: solid rgba(245, 245, 245, 0.349);
+}
+.list-group-item-action:hover{
+    background-color: black;
+   
+}
+.newForm{
+    color:whitesmoke;
+    font-family:  'Muli', sans-serif;
+    margin-left: 4vh;
+    margin-right: 4vh;
+    font-size: 3vh;
+    max-width: 60%;
+}
+.show-page{
+    margin-left: 4vh;
+    margin-right:4vh;
+    font-family:  'Muli', sans-serif;
+    font-size: larger;
+    background-color: whitesmoke;
+}
+.edit-goal{
+    font-family:  'Muli', sans-serif;
+    margin-left: 4vh;
+    color:rgba(245, 245, 245, 0.575);
+    margin-bottom: 3vh;
+}
+.form-group.checked{
+    display: flex;
+    flex-direction: row;
+}

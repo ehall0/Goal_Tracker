@@ -2,7 +2,7 @@ const express =require('express')
 const goalsController = express.Router()
 const mongoose = require('mongoose')
 const Goal = require('../models/goals.js')
-
+const show = console.log
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {
       return next()
@@ -145,4 +145,51 @@ goalsController.get('/:id',isAuthenticated, (req,res) => {
         }
     })
 })
+
+//////Daily  route///////
+goalsController.get('/view/daily' ,(req,res)=>{
+    const thisRunsNext=  (error, allGoals) => {
+        if(error){
+            show(error)
+        }else{
+            const props= {
+                goals: allGoals,
+                username: req.session.currentUser,
+            }
+        res.render('GoalPeriod', props)
+        }
+    }
+    Goal.find({timeframe: 'Daily'}, thisRunsNext)
+})
+//////Monthly route///////
+goalsController.get('/view/monthly' ,(req,res)=>{
+    const thisRunsNext=  (error, allGoals) => {
+        if(error){
+            show(error)
+        }else{
+            const props= {
+                goals: allGoals,
+                username: req.session.currentUser,
+            }
+        res.render('GoalPeriod', props)
+        }
+    }
+    Goal.find({timeframe: 'Monthly'}, thisRunsNext)
+})
+//////Yearly  route///////
+goalsController.get('/view/yearly',(req,res)=>{
+    const thisRunsNext=  (error, allGoals) => {
+        if(error){
+            show(error)
+        }else{
+            const props= {
+                goals: allGoals,
+                username: req.session.currentUser,
+            }
+        res.render('GoalPeriod', props)
+        }
+    }
+    Goal.find({timeframe: 'Yearly'}, thisRunsNext)
+})
+
 module.exports = goalsController
