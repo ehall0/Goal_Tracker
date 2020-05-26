@@ -9,10 +9,7 @@ class New extends React.Component {
                 <a className="nav-link" href= "/goals"> Back</a>
             </nav>
             <form className= "newForm" action="/goals" method="POST">
-                <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" className="form-control" name="name" /><br/>
-                </div>
+                
                 <div class="form-group">
                 <label for="exampleInputEmail1">Timeframe</label>
                 <input type="text" className="form-control" name="timeframe" /><br/>
