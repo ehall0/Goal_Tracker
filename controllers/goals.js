@@ -115,7 +115,7 @@ goalsController.post('/',isAuthenticated, (req, res)=>{
 // ///////Delete Route////////
 goalsController.delete('/:id',isAuthenticated,(req,res) =>{
    Goal.findByIdAndRemove(req.params.id,(err, data)=> {
-        res.redirect('/goals')
+        res.redirect(`/goals/`)
     })
  })
 
@@ -148,6 +148,7 @@ goalsController.get('/:id',isAuthenticated, (req,res) => {
 
 //////Daily  route///////
 goalsController.get('/view/daily' ,(req,res)=>{
+    
     const thisRunsNext=  (error, allGoals) => {
         if(error){
             show(error)
