@@ -5,6 +5,10 @@ class GoalPeriod extends React.Component {
     const logout = (<form action="/sessions/?_method=delete" method="post">
           <input className="btn btn-outline-dark" type="submit" value="Logout"/>
       </form>)
+
+      let reached = 0;
+      let inProgress =0;
+       const percentage =[];
     return (
         <Layout>
        <div id='index'>
@@ -21,7 +25,19 @@ class GoalPeriod extends React.Component {
                 <a className= "nav-link" href= "/goals/new"> Add New Goal</a>
                 <br/>
                 <a className= "nav-link" href= "/goals/"> Back</a>
-            
+                
+               { this.props.goals.map((goal, i) => {
+                  for(goal.isGoalReached in goal ){
+                   (goal.isGoalReached ? reached += 1 : inProgress += 1)  
+                }
+               percentage.push(((reached/(reached + inProgress))*100))
+             
+                return(
+                this.props.goals.length === percentage.length ?<h3 className="goalPerc"> {percentage[percentage.length - 1]}% of {goal.timeframe} goals completed </h3> : <h6></h6>
+                )
+          
+               })
+               }
             </nav>
             
             <div className= "list-group">

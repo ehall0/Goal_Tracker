@@ -148,7 +148,6 @@ goalsController.get('/:id',isAuthenticated, (req,res) => {
 
 //////Daily  route///////
 goalsController.get('/view/daily' ,(req,res)=>{
-    
     const thisRunsNext=  (error, allGoals) => {
         if(error){
             show(error)

@@ -106,3 +106,9 @@ padding-right:6vh;
     display: flex;
     flex-direction: row;
 }
+.goalPerc{
+    color:rgba(245, 245, 245, 0.575);
+    padding-left: 4vh;
+    padding-top:.5vh;
+    font-size: 3vh;
+}
