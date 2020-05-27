@@ -33,7 +33,8 @@ class GoalPeriod extends React.Component {
                percentage.push(((reached/(reached + inProgress))*100))
              
                 return(
-                this.props.goals.length === percentage.length ?<h3 className="goalPerc"> {percentage[percentage.length - 1]}% of {goal.timeframe} goals completed </h3> : <h6></h6>
+                this.props.goals.length === percentage.length ?<h3 className="goalPerc"> {percentage[percentage.length - 1]}% of {goal.timeframe} goals completed </h3> : ''
+                
                 )
           
                })
@@ -48,7 +49,10 @@ class GoalPeriod extends React.Component {
                           <a href={`/goals/${goal._id}`} className="list-group-item list-group-item-action">
                           <div class="d-flex w-100 justify-content-between">
                             <h5 className="mb-1">{goal.timeframe} {goal.isGoalReached ? <span class="badge badge-success">goal reached</span> : <span class="badge badge-secondary">in-progress</span> }</h5>
-                            
+                            <h5 className="mb-1">{goal.isGoalReached ? <span>&#10004;</span> : <div class="spinner-border text-secondary" role="status">
+                              <span class="sr-only">Loading...</span>
+                            </div>
+                            }</h5>
                             <small> <form action ={`/goals/${goal._id}?_method=DELETE`} method ="post">
                                     <input className="btn btn-danger" type="submit" value="delete"/>
                                   </form></small>
